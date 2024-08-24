@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import { ChainlinkPlugin, MainnetPriceFeeds } from '@chainsafe/web3-plugin-chainlink';
+import './App.css'; // Importing the CSS file\
+import "./components/nabar"
+// import NavBar from "./components/nabar";
 
 const App = () => {
   const [web3, setWeb3] = useState(null);
@@ -45,6 +48,7 @@ const App = () => {
 
   return (
     <div>
+      {/* <NavBar /> */}
       <h1>Crypto Insurance</h1>
       <p>Current BTC Price: {btcPrice} USD</p>
       <input type="text" placeholder="Insured Amount (BTC)" onChange={(e) => setInsuredAmount(e.target.value)} />
@@ -52,7 +56,7 @@ const App = () => {
       <button onClick={createPolicy}>Create Policy</button>
       <button onClick={checkAndPayout}>Check and Payout</button>
       <button onClick={getBTCPrice}>Get BTC Price</button>
-      {message && <p>{message}</p>} {/* Render message below the form */}
+      {message && <p className="message">{message}</p>} {/* Render message below the form */}
     </div>
   );
 };
