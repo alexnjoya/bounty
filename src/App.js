@@ -108,7 +108,7 @@ const App = () => {
             <div className="flex items-center bg-gray-700  px-[220px] text-white rounded-lg px-
              py-3 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
               <span className="flex items-center text-xl font-semibold">{btcPrice}</span>
-              <span className="ml-2 text-lg">  <pre> USD (ETH) </pre></span>
+              <span className="ml-2 text-lg">  <pre> USD (BTC) </pre></span>
             </div>
             <div className="flex items-center bg-gray-700 text-white rounded-lg px-[220px] py-2 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
             <span className="flex items-center text-xl font-semibold">{ethPrice}</span>
