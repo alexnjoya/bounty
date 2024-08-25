@@ -76,14 +76,3 @@ Suppose you have invested in a DeFi project that uses ETH as collateral. A sudde
 
 If you are a stablecoin issuer, maintaining a reserve of cryptocurrencies like BTC, ETH, or BNB is crucial. A significant drop in the price of these assets could affect the stability of your stablecoin. By insuring your reserves using this dApp, you can create policies that trigger payouts when the price of the reserve assets falls below a certain level, ensuring the stability of your stablecoin.
 
-## Contributing
-
-We welcome contributions from the community! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-By providing a clear and detailed README, we aim to demonstrate the practical applications and benefits of our Crypto Insurance dApp, making it a strong contender in the competition.
