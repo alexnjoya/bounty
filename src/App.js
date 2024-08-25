@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import { ChainlinkPlugin, MainnetPriceFeeds } from '@chainsafe/web3-plugin-chainlink';
 import Navbar from './components/navBar'; 
+import Footer from './components/footer';
 
 const App = () => {
   const [web3, setWeb3] = useState(null);
@@ -65,8 +66,8 @@ const App = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white font-lato">
-      <Navbar className="mb-10" onConnectWallet={connectWallet} />
-      <h1 className="text-4xl font-bold text-center mt-20px mb-6">Crypto Insurance Dapp</h1>
+      <Navbar onConnectWallet={connectWallet} />
+      <h1 className="text-4xl font-bold text-center mt-2 mb-6">Crypto Insurance Dapp</h1>
       <div className="flex flex-col md:flex-row items-center justify-center flex-grow p-8 bg-gray-800 shadow-lg space-y-8 md:space-y-0 md:space-x-8">
         <div className="flex flex-col items-center space-y-4 w-full md:w-1/2">
           <select
@@ -152,6 +153,7 @@ const App = () => {
           </tbody>
         </table>
       </div>
+      <Footer />
     </div>
   );
 };
