@@ -34,7 +34,6 @@ const App = () => {
     setBtcPrice(formatPrice);
     setEthPrice(formatPrice2);
     setBnbPrice(formatPrice3);
-
   };
 
   const createPolicy = () => {
@@ -67,12 +66,11 @@ const App = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white font-lato">
       <Navbar onConnectWallet={connectWallet} />
-      <h1 className="text-4xl font-bold pl-[450px] mb-6">Crypto Insurance</h1>
-      <div className="flex flex-col-2 items-center justify-center flex-grow p-8 bg-gray-800 shadow-lg">
-
-        <div>
+      <h1 className="text-4xl font-bold text-center mb-6">Crypto Insurance</h1>
+      <div className="flex flex-col md:flex-row items-center justify-center flex-grow p-8 bg-gray-800 shadow-lg space-y-8 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col items-center space-y-4 w-full md:w-1/2">
           <select
-            className="border-2 border-gray-600 rounded-lg p-3 mb-4 w-96 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
+            className="border-2 border-gray-600 rounded-lg p-3 w-full bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
             onChange={(e) => setSelectedToken(e.target.value)}
           >
             <option value="BTC">BTC</option>
@@ -82,62 +80,53 @@ const App = () => {
           <input
             type="text"
             placeholder="Insured Amount"
-            className="border-2 border-gray-600 rounded-lg p-3 mb-4 w-96 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
+            className="border-2 border-gray-600 rounded-lg p-3 w-full bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
             onChange={(e) => setInsuredAmount(e.target.value)}
           />
           <input
             type="text"
             placeholder="Threshold Price (USD)"
-            className="border-2 border-gray-600 rounded-lg p-3 mb-4 w-96 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
+            className="border-2 border-gray-600 rounded-lg p-3 w-full bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
             onChange={(e) => setThresholdPrice(e.target.value)}
           />
           <button
-            className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-400 transition duration-300 ease-in-out mb-2 w-96 transform hover:scale-105"
+            className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-400 transition duration-300 ease-in-out w-full transform hover:scale-105"
             onClick={createPolicy}
           >
             Create Policy
           </button>
           <button
-            className="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-green-400 transition duration-300 ease-in-out mb-2 w-96 transform hover:scale-105"
+            className="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-green-400 transition duration-300 ease-in-out w-full transform hover:scale-105"
             onClick={checkAndPayout}
           >
             Check and Payout
           </button>
-
         </div>
-        <div className="flex flex-col-3 items-center justify-center mb-4">
-          <div className="flex ">
-            <h3 className="text-lg mr-2">Current Prices:</h3>
-            <div className="flex flex-col-3 items-center justify-center mb-4 items-center space-x-2">
-              <div className="flex items-center bg-gray-700 text-white rounded-lg px-4 py-2 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
-                <span className="text-2xl font-semibold">{btcPrice}</span>
-                <span className="ml-2 text-lg">USD (BTC)</span>
-              </div>
-              <div className="flex items-center bg-gray-700 text-white rounded-lg px-4 py-2 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
-                <span className="text-2xl font-semibold">{ethPrice}</span>
-                <span className="ml-2 text-lg">USD (ETH)</span>
-              </div>
-              <div className="flex items-center bg-gray-700 text-white rounded-lg px-4 py-2 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
-                <span className="text-2xl font-semibold">{bnbPrice}</span>
-                <span className="ml-2 text-lg">USD (BNB)</span>
-              </div>
+        <div className="flex flex-col items-center space-y-4 w-full md:w-1/2">
+          <h2 className="text-2xl font-bold">Current Prices:</h2>
+          <div className="flex flex-col items-left space-y-4">
+            <div className="flex items-center bg-gray-700  px-[220px] text-white rounded-lg px-
+             py-3 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
+              <span className="flex items-center text-xl font-semibold">{btcPrice}</span>
+              <span className="ml-2 text-lg">  <pre> USD (ETH) </pre></span>
             </div>
-            <div className="flex items-center  justify-center mb-4">
-              <button
-                className="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300 ease-in-out w-96 transform hover:scale-105"
-                onClick={getPrices}
-              >
-                Get Prices
-              </button>
-
+            <div className="flex items-center bg-gray-700 text-white rounded-lg px-[220px] py-2 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
+            <span className="flex items-center text-xl font-semibold">{ethPrice}</span>
+              <span className="ml-2 text-lg">USD (ETH)</span>
             </div>
-
+            <div className="flex items-center bg-gray-700 text-white rounded-lg  px-[220px] px-4 py-2 cursor-pointer hover:bg-gray-600 transition duration-300 ease-in-out">
+            <span className="flex items-center text-xl font-semibold">{bnbPrice}</span>
+              <span className="ml-2 text-lg">USD (BNB)</span>
+            </div>
           </div>
-
+          <button
+            className="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300 ease-in-out w-full transform hover:scale-105"
+            onClick={getPrices}
+          >
+            Get Prices
+          </button>
         </div>
-
       </div>
-
       <div className="p-8 bg-gray-800">
         <h2 className="text-2xl font-bold mb-4">Insurance Policy History</h2>
         <table className="min-w-full bg-gray-700 text-white">
