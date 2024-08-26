@@ -39,8 +39,8 @@ Cryptocurrency investments are highly volatile, and prices can fluctuate signifi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/crypto-insurance-dapp.git
-   cd crypto-insurance-dapp
+  https://github.com/alexnjoya/bounty.git
+   cd bounty
    ```
 
 2. Install dependencies:
