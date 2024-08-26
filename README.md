@@ -12,8 +12,6 @@ Welcome to the Crypto Insurance dApp! This decentralized application allows user
 - [Installation](#installation)
 - [Usage](#usage)
 - [Real-World Examples](#real-world-examples)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
